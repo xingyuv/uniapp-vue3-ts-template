@@ -1,0 +1,9 @@
+# eslint 忽略检查 (根据项目需要自行添加)
+/build/
+/config/
+/dist/
+/*.js
+/test/unit/coverage/
+/node_modules/*
+/dist*
+/src/main.ts
