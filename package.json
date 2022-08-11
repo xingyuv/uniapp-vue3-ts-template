@@ -4,6 +4,8 @@
   "description": "基于vue3、vite3、typesScript 的uniapp模版",
   "author": "xingyu",
   "scripts": {
+    "i": "pnpm install",
+    "check:up": "npx @dcloudio/uvm",
     "dev:app": "uni -p app",
     "dev:custom": "uni -p",
     "dev:h5": "uni",

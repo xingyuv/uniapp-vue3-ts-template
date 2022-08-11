@@ -1,120 +1,56 @@
-## 简介
+# 🌈 uniapp-vue3-ts-template 基础框架
 
-- **uni-app Vue3 Vite3 TypeScript 基础框架** 
-- cli创建的Vue3/Vite项目 与 使用HBuilderX导入插件 的包有差异,请直接访问 [开源地址](https://gitee.com/h_mo/uniapp-vue3-vite3-ts-template)
+<p align="center">
+    <img src="https://img.shields.io/badge/-Vue3.2-34495e?logo=vue.j" />
+    <img src="https://img.shields.io/badge/-Vite3-646cff?logo=vite&logoColor=white" />
+    <img src="https://img.shields.io/badge/-TypeScript4.7-blue?logo=typescript&logoColor=white" />
+    <img src="https://img.shields.io/badge/-Pinia2-yellow?logo=picpay&logoColor=white" />
+    <img src="https://img.shields.io/badge/-ESLint-4b32c3?logo=eslint&logoColor=white" />
+    <img src="https://img.shields.io/badge/-pnpm7-F69220?logo=pnpm&logoColor=white" />
+</p>
 
+## 介绍
 
-### 说明
-- 框架完全基于Vue3 SFC `<script setup>` 写法,不支持Vue2;
-- 可用于学习与交流;
-- 目前测试H5、微信小程序通过,钉钉或支付宝小程序未通过,原因: 引入pinia在支付宝小程序中报错;
-- 其他平台暂未测试,后续会增加;
-- 如发现问题或建议可在评论区留言,会及时处理;
-- 如有需求亦可在评论区留言,或在此项目基础上增加;
-
-## 特性
-
-- **最新技术栈**：使用 Vue3/Vite3/pinia ,TypeScript 等前端前沿技术开发;
-- **Eslint/Prettier**: 规范代码格式,统一编码;
-- **路由拦截**: 基于uni.addInterceptor进行路由拦截;
-- **请求拦截**: 核心使用 [luch-request](https://ext.dcloud.net.cn/plugin?id=392),支持请求和响应拦截等;
-- **缓存加密**: 使用AES加密缓存,可设置区分在开发或生成环境中是否加密;
-
-## 目录结构
-
-```shell
-.
-├─ src
-│   ├─assets # 静态资源目录
-│   │   └─ style
-│   │        └─main.scss # 公共样式
-│   │
-│   ├─components # 组件目录
-│   │   ├─ BasicButton
-│   │   │    ├─index.vue
-│   │   │    └─prpos.ts
-│   │   └─...
-│   │ 
-│   ├─enums # 枚举/常量
-│   │   ├─ cacheEnum.ts
-│   │   └─...
-│   │ 
-│   ├─pages # 页面
-│   │   ├─ index
-│   │   │    └─index.vue
-│   │   └─...
-│   │ 
-│   ├─services # 接口相关
-│   │   ├─ api # api  
-│   │   │    ├─auth.ts
-│   │   │    └─...
-│   │   │
-│   │   └─ model # 数据模型  
-│   │        ├─authModel.d.ts
-│   │        └─...
-│   │ 
-│   ├─settings # 设置
-│   │   └─ encryptionSetting # 加密设置  
-│   │
-│   ├─state # 状态管理模式(pinia)
-│   │   ├─ modules # 数据模块  
-│   │   │    ├─auth.ts
-│   │   │    └─...
-│   │   │
-│   │   └─ index.ts
-│   │ 
-│   ├─static # 静态公共文件
-│   │   ├─ images # 图片  
-│   │   │    ├─avatar.png
-│   │   │    └─...
-│   │   │
-│   │   └─ ...
-│   │   
-│   ├─types # 类型文件
-│   │   ├─ http.d.ts
-│   │   └─ ...
-│   │
-│   └─utils # 工具类
-│       ├─ catch # 缓存相关目录
-│       ├─ http  # request相关目录
-│       ├─ interceptors  # 拦截器相关目录
-│       └─ ...
-│
-├─ .env
-├─ .env.development
-├─ .env.production
-├─ .eslintignore
-├─ .eslintrc.js
-├─ .gitignore
-├─ .prettierignore
-├─ .prettierrc.js
-├─ favicon.ico
-├─ index.html
-├─ package.json
-├─ pnpm-lock.yaml
-├─ README.md
-├─ tree.txt
-├─ tsconfig.json
-└─ vite.config.ts
-
-```
-
-
-
-## 预览
-
-- H5
-
-  ![h5](https://api-catch.ranesuangyu.top/images/20220621/364f2b47d91ae5ae82a33d33854e2540.png
-  ) 
-
-[//]: # (- 小程序&#40;暂未发布&#41;)
-
-[//]: # (  ![小程序]&#40;http://api-catch.ranesuangyu.top/images/20220621/8d4388315ef5b8630d0c0b3963d1ba6b.jpg&#41;)
-
+- 基于 vue3.2+ ，TypeScript ，Vite3 ，Pinia等开发的uniapp 基础框架
+- [开源地址](https://gitee.com/xingyu4j/uniapp-vue3-ts-template)
   
+## 注意事项
+
+- 项目路径请不要使用中文命名！！！会造成解析乱码！！！请使用全英文路径！！！
+- node >=14.18.0(建议使用 16 版本) ,pnpm >=7
+
+### 前端依赖
+
+| 框架 | 说明 | 版本     |
+| --- | --- |--------|
+| [Vue](https://staging-cn.vuejs.org/) | vue 框架 | 3.2.37 |
+| [Vite](https://cn.vitejs.dev//) | 开发与构建工具 | 3.0.5 |
+| [TypeScript](https://www.typescriptlang.org/docs/) | JavaScript 的超集 | 4.7.4 |
+| [pinia](https://pinia.vuejs.org/) | Vue 存储库 替代 vuex5 | 2.0.17 |
+| [vue-i18n](https://kazupon.github.io/vue-i18n/zh/introduction.html/) | 国际化 | 9.2.0 |
+| [uniapp](https://uniapp.dcloud.net.cn//) | uniapp | 3.0.0 |
 
 ## 安装使用
+
+- 查看当前 npm 源
+
+```bash
+npm config ls
+```
+
+- 如果执行上面命令您并未看到 registry = "https://registry.npmjs.org/"，说明使用的非npm官方源，请执行下面命令
+
+```bash
+npm config set registry https://registry.npmjs.org
+```
+
+- 如果您还没安装 pnpm，请执行下面命令
+
+```bash
+npm install -g pnpm
+```
+
+- mac 用户遇到安装报错请在命令前加上 sudo
 
 - 安装依赖
 
@@ -122,19 +58,31 @@
 pnpm install
 ```
 
-- 运行
+- 运行项目
 
 ```bash
-# 其他端请查看 webpage.json script
-pnpm dev:h5
+pnpm run dev:h5
 ```
 
 - 打包
 
 ```bash
-# 其他端请查看 webpage.json script
-pnpm build:h5
+pnpm run build:h5
 ```
+
+- 安装一个包
+
+```bash
+pnpm add 包名
+```
+
+- 卸载一个包
+
+```bash
+pnpm remove 包名
+```
+
+- 其他命令请看 package.json
 
 ## Git 贡献提交规范
 
