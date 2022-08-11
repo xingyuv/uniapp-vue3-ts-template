@@ -1,7 +1,6 @@
 import { resolve } from 'path'
 import { loadEnv } from 'vite'
 import type { ConfigEnv, UserConfig } from 'vite'
-import Vue from '@vitejs/plugin-vue'
 import Uni from '@dcloudio/vite-plugin-uni'
 import EslintPlugin from 'vite-plugin-eslint'
 import VueI18n from '@intlify/vite-plugin-vue-i18n'
@@ -16,7 +15,26 @@ export default ({ mode }: ConfigEnv): UserConfig => {
   const root = process.cwd()
   const env = loadEnv(mode, root)
   return {
-    base: './',
+    base: env.VITE_BASE_PATH,
+    root: root,
+    // 服务端渲染
+    server: {
+      // 是否开启 https
+      https: false,
+      // 端口号
+      port: env.VITE_PORT,
+      host: "0.0.0.0",
+      open: env.VITE_OPEN,
+      // 本地跨域代理
+      proxy: {
+        ['/dev-api']: {
+          target: env.VITE_BASE_URL,
+          ws: false,
+          changeOrigin: true,
+          rewrite: (path) => path.replace(new RegExp(`^/dev-api`), ''),
+        },
+      },
+    },
     resolve: {
       alias: [
         {
@@ -37,23 +55,7 @@ export default ({ mode }: ConfigEnv): UserConfig => {
         }
       }
     },
-    server: {
-      host: true,
-      proxy: {
-        '/api': {
-          target: env.VITE_PROXY_BASE_URL,
-          changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/api/, '')
-        },
-        '/upload': {
-          target: env.VITE_PROXY_UPLOAD_URL,
-          changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/upload/, '')
-        },
-      },
-    },
     plugins: [
-      Vue(),
       Uni(),
       EslintPlugin({
         cache: false,
@@ -65,13 +67,6 @@ export default ({ mode }: ConfigEnv): UserConfig => {
         compositionOnly: true,
         include: [resolve(__dirname, 'src/locales/**')]
       })
-    ],
-    css: {
-      preprocessorOptions: {
-        scss: {
-          // additionalData: '@import "@/assets/style/main.scss";',
-        }
-      }
-    }
+    ]
   }
 }
