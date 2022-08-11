@@ -1,7 +1,7 @@
 import { resolve } from 'path'
 import { loadEnv } from 'vite'
 import type { ConfigEnv, UserConfig } from 'vite'
-import Uni from '@dcloudio/vite-plugin-uni'
+import uni from '@dcloudio/vite-plugin-uni'
 import EslintPlugin from 'vite-plugin-eslint'
 import VueI18n from '@intlify/vite-plugin-vue-i18n'
 
@@ -56,7 +56,7 @@ export default ({ mode }: ConfigEnv): UserConfig => {
       }
     },
     plugins: [
-      Uni(),
+      uni(),
       EslintPlugin({
         cache: false,
         include: ['src/**/*.js', 'src/**/*.vue', 'src/**/*.ts'],

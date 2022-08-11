@@ -23,7 +23,8 @@
     "paths": {
       "@/*": ["src/*"]
     },
-    "types": ["@dcloudio/types", "mini-types", "miniprogram-api-typings"]
+    "types": ["@dcloudio/types", "mini-types", "miniprogram-api-typings"],
+    "typeRoots": ["./node_modules/@types/", "src/types"]
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
   "exclude": ["dist", "node_modules"]
