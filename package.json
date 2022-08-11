@@ -33,7 +33,9 @@
     "build:mp-weixin": "uni build -p mp-weixin --minify",
     "build:quickapp-webview": "uni build -p quickapp-webview",
     "build:quickapp-webview-huawei": "uni build -p quickapp-webview-huawei",
-    "build:quickapp-webview-union": "uni build -p quickapp-webview-union"
+    "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
+    "lint:lint-staged": "lint-staged -c ./.husky/lintstagedrc.js",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@dcloudio/uni-app": "3.0.0-alpha-3050420220804004",
@@ -54,6 +56,8 @@
     "vue-i18n": "^9.2.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
     "@dcloudio/types": "^3.0.7",
     "@dcloudio/uni-automator": "3.0.0-alpha-3050420220804004",
     "@dcloudio/uni-cli-shared": "3.0.0-alpha-3050420220804004",
@@ -68,6 +72,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.3.0",
+    "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "mini-types": "^0.1.7",
     "miniprogram-api-typings": "^3.5.0",
