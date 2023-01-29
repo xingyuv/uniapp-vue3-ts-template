@@ -22,7 +22,7 @@ export default ({ mode }: ConfigEnv): UserConfig => {
       // 是否开启 https
       https: false,
       // 端口号
-      port: env.VITE_PORT,
+      port: env.VITE_PORT as unknown as number,
       host: "0.0.0.0",
       open: env.VITE_OPEN,
       // 本地跨域代理
