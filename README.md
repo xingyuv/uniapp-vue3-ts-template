@@ -2,8 +2,8 @@
 
 <p align="center">
     <img src="https://img.shields.io/badge/-Vue3.2-34495e?logo=vue.j" />
-    <img src="https://img.shields.io/badge/-Vite3-646cff?logo=vite&logoColor=white" />
-    <img src="https://img.shields.io/badge/-TypeScript4.7-blue?logo=typescript&logoColor=white" />
+    <img src="https://img.shields.io/badge/-Vite4-646cff?logo=vite&logoColor=white" />
+    <img src="https://img.shields.io/badge/-TypeScript4.9-blue?logo=typescript&logoColor=white" />
     <img src="https://img.shields.io/badge/-Pinia2-yellow?logo=picpay&logoColor=white" />
     <img src="https://img.shields.io/badge/-ESLint-4b32c3?logo=eslint&logoColor=white" />
     <img src="https://img.shields.io/badge/-pnpm7-F69220?logo=pnpm&logoColor=white" />
@@ -11,9 +11,9 @@
 
 ## 介绍
 
-- 基于 vue3.2+ ，TypeScript ，Vite3 ，Pinia等开发的uniapp 基础框架
+- 基于 vue3.2+ ，TypeScript ，Vite3 ，Pinia 等开发的 uniapp 基础框架
 - [开源地址](https://gitee.com/xingyu4j/uniapp-vue3-ts-template)
-  
+
 ## 注意事项
 
 - 项目路径请不要使用中文命名！！！会造成解析乱码！！！请使用全英文路径！！！
@@ -21,8 +21,8 @@
 
 ### 前端依赖
 
-| 框架 | 说明 | 版本     |
-| --- | --- |--------|
+| 框架 | 说明 | 版本 |
+| --- | --- | --- |
 | [Vue](https://staging-cn.vuejs.org/) | vue 框架 | 3.2.37 |
 | [Vite](https://cn.vitejs.dev//) | 开发与构建工具 | 3.0.5 |
 | [TypeScript](https://www.typescriptlang.org/docs/) | JavaScript 的超集 | 4.7.4 |
