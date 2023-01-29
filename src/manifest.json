@@ -78,6 +78,6 @@
     "devServer": {
       "https": false
     },
-    "title": "uni-preset-vue3"
+    "title": "uniapp-vue-ts"
   }
 }

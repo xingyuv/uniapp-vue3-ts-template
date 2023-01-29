@@ -2,14 +2,14 @@
   <view class="content">
     <image class="logo" src="/static/logo.png" />
     <view class="text-area">
-      <text class="title">{{ title }}</text>
+      <text class="title">{{ t('page.route.work') }}</text>
     </view>
   </view>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-const title = ref('work')
+import { useI18n } from '@/hooks/web/useI18n'
+const { t } = useI18n()
 </script>
 
 <style>
