@@ -41,5 +41,6 @@
   "i18n-ally.enabledFrameworks": [
     "vue", "react"
   ],
-  "god.tsconfig": "./tsconfig.json"
+  "god.tsconfig": "./tsconfig.json",
+  "nuxt.isNuxtApp": false
 }

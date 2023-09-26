@@ -3,7 +3,7 @@ import { loadEnv } from 'vite'
 import type { ConfigEnv, UserConfig } from 'vite'
 import uni from '@dcloudio/vite-plugin-uni'
 import EslintPlugin from 'vite-plugin-eslint'
-import VueI18n from '@intlify/vite-plugin-vue-i18n'
+import VueI18n from '@intlify/unplugin-vue-i18n/vite'
 
 // 路径查找
 function pathResolve(dir: string) {
