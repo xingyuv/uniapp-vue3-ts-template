@@ -7,16 +7,15 @@ interface AppState {
   theme: string
 }
 
-export const useAppStore = defineStore({
-  id: 'user',
+export const useAppStore = defineStore('app', {
   state: (): AppState => ({
     title: '',
     locale: '',
     theme: ''
   }),
   getters: {
-    getTitle(): string {
-      return this.title
+    getTitle(state): string {
+      return state.title
     }
   },
   actions: {

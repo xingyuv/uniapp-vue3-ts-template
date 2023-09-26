@@ -7,16 +7,15 @@ interface UserState {
   userName: string
 }
 
-export const useUserStore = defineStore({
-  id: 'user',
+export const useUserStore = defineStore('user', {
   state: (): UserState => ({
     id: 0,
     avatar: '',
     userName: ''
   }),
   getters: {
-    getUserName(): string {
-      return this.userName
+    getUserName(state): string {
+      return state.userName
     }
   },
   actions: {
