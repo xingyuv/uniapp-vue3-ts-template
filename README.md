@@ -11,23 +11,23 @@
 
 ## 介绍
 
-- 基于 vue3.2+ ，TypeScript ，Vite3 ，Pinia 等开发的 uniapp 基础框架
+- 基于 vue3.3+ ，TypeScript ，Vite3 ，Pinia 等开发的 uniapp 基础框架
 - [开源地址](https://gitee.com/xingyu4j/uniapp-vue3-ts-template)
 
 ## 注意事项
 
 - 项目路径请不要使用中文命名！！！会造成解析乱码！！！请使用全英文路径！！！
-- node >=14.18.0(建议使用 16 版本) ,pnpm >=7
+- node >=16(建议使用 18 版本) ,pnpm >=7
 
 ### 前端依赖
 
 | 框架 | 说明 | 版本 |
 | --- | --- | --- |
-| [Vue](https://staging-cn.vuejs.org/) | vue 框架 | 3.2.37 |
-| [Vite](https://cn.vitejs.dev//) | 开发与构建工具 | 3.0.5 |
-| [TypeScript](https://www.typescriptlang.org/docs/) | JavaScript 的超集 | 4.7.4 |
-| [pinia](https://pinia.vuejs.org/) | Vue 存储库 替代 vuex5 | 2.0.17 |
-| [vue-i18n](https://kazupon.github.io/vue-i18n/zh/introduction.html/) | 国际化 | 9.2.0 |
+| [Vue](https://staging-cn.vuejs.org/) | vue 框架 | 3.3.4 |
+| [Vite](https://cn.vitejs.dev//) | 开发与构建工具 | 4.4.9 |
+| [TypeScript](https://www.typescriptlang.org/docs/) | JavaScript 的超集 | 5.2.2 |
+| [pinia](https://pinia.vuejs.org/) | Vue 存储库 替代 vuex5 | 2.0.33 |
+| [vue-i18n](https://kazupon.github.io/vue-i18n/zh/introduction.html/) | 国际化 | 9.4.1 |
 | [uniapp](https://uniapp.dcloud.net.cn//) | uniapp | 3.0.0 |
 
 ## 安装使用
@@ -38,7 +38,7 @@
 npm config ls
 ```
 
-- 如果执行上面命令您并未看到 registry = "https://registry.npmjs.org/"，说明使用的非npm官方源，请执行下面命令
+- 如果执行上面命令您并未看到 registry = "<https://registry.npmjs.org/"，说明使用的非npm官方源，请执行下面命令>
 
 ```bash
 npm config set registry https://registry.npmjs.org
